@@ -45,6 +45,7 @@ const Account = () => {
   }
 
   return (
+    <div className = "app">
     <form onSubmit={handleSubmit}>
       <h2 id="total">{status}</h2>
       <label> Select and action below to continue</label>
@@ -57,7 +58,8 @@ const Account = () => {
       atmMode != "" && <ATMDeposit onChange={handleChange} isDeposit={isDeposit} isValid={setValidTransaction}></ATMDeposit>
       }
     </form>
+    </div>
   );
 };
 // ========================================
-ReactDOM.render(<Account />, document.getElementById('root'));
+ReactDOM.render(<Account/>, document.getElementById('root'));
